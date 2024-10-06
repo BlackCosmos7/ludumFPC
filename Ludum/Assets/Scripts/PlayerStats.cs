@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        hpText.text = ((int)hp).ToString();
+        UpdateHpText();
     }
 
     void FixedUpdate()
@@ -24,7 +24,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    private void AddHp()
+    public void AddHp()
     {
         if (hp < 3)
         {
@@ -37,13 +37,14 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    private void TakeDamage()
+    public void TakeDamage()
     {
         hp -= 1 * Time.deltaTime;
 
         if (hp < 0)
         {
             hp = 0;
+      
         }
     }
 
@@ -54,13 +55,13 @@ public class PlayerStats : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Medicine")
+        if (collision.gameObject.CompareTag("Medicine"))
         {
             AddHp();
             UpdateHpText();
         }
 
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             trig = true;
         }
@@ -68,7 +69,7 @@ public class PlayerStats : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             trig = false;
         }
