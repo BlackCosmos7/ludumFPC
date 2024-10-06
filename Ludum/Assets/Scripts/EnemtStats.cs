@@ -7,7 +7,6 @@ public class EnemyStats : MonoBehaviour
 {
     public float health = 3;
     public float damage = 1;
-    public float moveSpeed = 2;
 
 void Update()
     {

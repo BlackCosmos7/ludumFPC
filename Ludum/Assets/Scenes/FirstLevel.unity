@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 463795751}
   - component: {fileID: 463795753}
   - component: {fileID: 463795752}
+  - component: {fileID: 463795754}
   m_Layer: 5
   m_Name: Enemy
   m_TagString: Enemy
@@ -581,7 +582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1385772777}
-  attackRange: 10
   moveSpeed: 5
 --- !u!114 &463795747
 MonoBehaviour:
@@ -635,7 +635,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   damage: 1
-  moveSpeed: 2
 --- !u!50 &463795752
 Rigidbody2D:
   serializedVersion: 4
@@ -708,6 +707,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &463795754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463795743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac165cb3e59b84f4fb1b9006942a4df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 463795743}
 --- !u!1 &622258716
 GameObject:
   m_ObjectHideFlags: 0

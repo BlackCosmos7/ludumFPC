@@ -1,19 +1,17 @@
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public Transform player;
-    public float attackRange = 10f;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 3.0f;
 
     void Update()
     {
-        Vector3 direction = player.position - transform.position;
-        float distanceToPlayer = direction.magnitude;
-
-        if (distanceToPlayer <= attackRange)
+        if (player != null)
         {
-            transform.Translate(direction.normalized * moveSpeed * Time.deltaTime);
+            Vector3 direction = (player.position - transform.position).normalized;
+
+            transform.position += direction * moveSpeed * Time.deltaTime;
         }
     }
 }
