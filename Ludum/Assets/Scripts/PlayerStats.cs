@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -43,6 +44,10 @@ public class PlayerStats : MonoBehaviour
 
         if (hp < 0)
         {
+           // if (deadScreen.activeSelf)
+           // {
+           //     deadScreen.SetActive(true);
+            //}
             hp = 0;
 
         }
