@@ -49,7 +49,6 @@ public class PlayerStats : MonoBehaviour
            //     deadScreen.SetActive(true);
             //}
             hp = 0;
-
         }
     }
 

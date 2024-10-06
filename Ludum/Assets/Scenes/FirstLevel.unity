@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1609445668}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DeadScreen, Assembly-CSharp
         m_MethodName: ReStart
         m_Mode: 1
@@ -1617,7 +1617,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00882566, y: -0.0009853244}
@@ -1833,7 +1833,7 @@ GameObject:
   - component: {fileID: 1609445667}
   - component: {fileID: 1609445666}
   - component: {fileID: 1609445669}
-  - component: {fileID: 1609445668}
+  - component: {fileID: 1609445670}
   m_Layer: 5
   m_Name: DeadScreen
   m_TagString: Untagged
@@ -1900,18 +1900,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609445664}
   m_CullTransparentMesh: 1
---- !u!114 &1609445668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609445664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c510b4b8204f2014ba5f7189060d116c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1609445669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1922,6 +1910,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b5355cf9a3a1244fad1dfa713d1cdf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1609445670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609445664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c510b4b8204f2014ba5f7189060d116c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1629448419
@@ -2307,7 +2307,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
