@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
     public float hp = 3;
-    public Text hpText;
+    public TextMeshProUGUI hpText;
     private bool trig;
 
     void Start()
