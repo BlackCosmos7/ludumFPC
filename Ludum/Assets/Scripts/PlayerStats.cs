@@ -44,16 +44,16 @@ public class PlayerStats : MonoBehaviour
         if (hp < 0)
         {
             hp = 0;
-      
+
         }
     }
 
-    private void UpdateHpText()
+    public void UpdateHpText()
     {
         hpText.text = ((int)hp).ToString();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Medicine"))
         {
