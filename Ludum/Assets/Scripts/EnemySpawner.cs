@@ -1,26 +1,45 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Не забудьте добавить это
+using System.Collections;
 
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public Transform player;
+    public int maxEnemies = 5; // Максимальное количество врагов
+    private int currentEnemyCount = 0; // Текущее количество врагов
 
     void Start()
     {
-        SpawnEnemy();
+        StartCoroutine(SpawnEnemies());
     }
 
-    void Update()
+    private IEnumerator SpawnEnemies()
     {
-        if (!GameObject.FindGameObjectWithTag("Enemy"))
+        while (currentEnemyCount < maxEnemies)
         {
-            SpawnEnemy();
+            if (!GameObject.FindGameObjectWithTag("Enemy"))
+            {
+                SpawnEnemy();
+                currentEnemyCount++;
+            }
+            yield return new WaitForSeconds(10f); // Ждать 10 секунд
         }
+
+        // После спавна всех врагов ждем 20 секунд и отправляем игрока на следующую сцену
+        yield return new WaitForSeconds(20f);
+        LoadNextScene();
     }
 
     void SpawnEnemy()
     {
-        Vector3 spawnPosition = player.position + new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f));
+        Vector3 spawnPosition = transform.position;
         Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+    }
+
+    void LoadNextScene()
+    {
+        // Замените "NextSceneName" на название вашей следующей сцены
+        SceneManager.LoadScene("NextSceneName");
     }
 }
