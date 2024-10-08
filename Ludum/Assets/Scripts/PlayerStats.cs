@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class PlayerStats : MonoBehaviour
         UpdateHpText();
     }
 
+    void Die()
+    {
+        SceneManager.LoadScene("DeadScreen");
+    }
+    
+
     public void TakeDamage(float damage)
     {
         hp -= damage;
@@ -36,6 +43,9 @@ public class PlayerStats : MonoBehaviour
             //    DeadScreen.SetActive(true);
             //}
             hp = 0;
+            {
+                Die();
+            }
             // Логика смерти
         }
 
