@@ -4,7 +4,7 @@ using System.Collections;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefabs; // Массив префабов противников
     public Transform player;
     public int maxEnemies = 10; // Максимальное количество врагов
     private int currentEnemyCount = 0; // Текущее количество врагов
@@ -18,12 +18,12 @@ public class EnemySpawner : MonoBehaviour
     {
         while (currentEnemyCount < maxEnemies)
         {
-            if (!GameObject.FindGameObjectWithTag("Enemy"))
+            if (currentEnemyCount < maxEnemies && !GameObject.FindGameObjectWithTag("Enemy"))
             {
                 SpawnEnemy();
                 currentEnemyCount++;
             }
-            yield return new WaitForSeconds(3f); // Ждать 10 секунд
+            yield return new WaitForSeconds(2f); // Ждать 3 секунды
         }
 
         // После спавна всех врагов ждем 20 секунд и отправляем игрока на следующую сцену
@@ -34,7 +34,9 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Vector3 spawnPosition = transform.position;
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        // Случайный выбор противника из массива
+        int randomIndex = Random.Range(0, enemyPrefabs.Length);
+        Instantiate(enemyPrefabs[randomIndex], spawnPosition, Quaternion.identity);
     }
 
     void LoadNextScene()
