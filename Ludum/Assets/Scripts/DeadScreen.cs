@@ -8,6 +8,6 @@ public class DeadScreen : MonoBehaviour
     // Start is called before the first frame update
     public void ReStart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("FirstLevel");
     }
 }
