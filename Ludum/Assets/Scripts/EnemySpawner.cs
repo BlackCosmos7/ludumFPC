@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public Transform player;
-    public int maxEnemies = 5; // Максимальное количество врагов
+    public int maxEnemies = 10; // Максимальное количество врагов
     private int currentEnemyCount = 0; // Текущее количество врагов
 
     void Start()
@@ -23,11 +23,11 @@ public class EnemySpawner : MonoBehaviour
                 SpawnEnemy();
                 currentEnemyCount++;
             }
-            yield return new WaitForSeconds(10f); // Ждать 10 секунд
+            yield return new WaitForSeconds(3f); // Ждать 10 секунд
         }
 
         // После спавна всех врагов ждем 20 секунд и отправляем игрока на следующую сцену
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(10f);
         LoadNextScene();
     }
 
