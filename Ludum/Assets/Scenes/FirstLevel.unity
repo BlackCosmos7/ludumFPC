@@ -1276,9 +1276,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6d004b59c28487c4bb5b4c5efbaa6c68, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.269
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1711,7 +1711,7 @@ GameObject:
   - component: {fileID: 1561464593}
   - component: {fileID: 1561464596}
   - component: {fileID: 1561464597}
-  - component: {fileID: 1561464598}
+  - component: {fileID: 1561464599}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1906,7 +1906,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1561464598
+--- !u!114 &1561464599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1915,12 +1915,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1561464590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b186d366d25dd4f4287c5e71a20a4708, type: 3}
+  m_Script: {fileID: 11500000, guid: e93c8d9466d975540a8c4d4738620e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phraseText: {fileID: 0}
-  displayDuration: 5
-  timerDuration: 30
+  audioClips:
+  - {fileID: 8300000, guid: f4ca86237b21f78478b6be32acb3f9f7, type: 3}
+  - {fileID: 8300000, guid: 895f0be81d2b21b4dae61772dc2072be, type: 3}
+  - {fileID: 8300000, guid: d9151c3baaf95434c862ffacfdde0cf9, type: 3}
+  - {fileID: 8300000, guid: 7a2e2972355b10c459e9c6c6dc2848e8, type: 3}
+  - {fileID: 8300000, guid: 3211a6b0e8c96f34e97c9935b7d87569, type: 3}
 --- !u!1 &1593770975
 GameObject:
   m_ObjectHideFlags: 0
