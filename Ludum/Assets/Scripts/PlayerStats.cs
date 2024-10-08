@@ -31,6 +31,10 @@ public class PlayerStats : MonoBehaviour
 
         if (hp < 0)
         {
+            //if (DeadScreen.activeSelf)
+            //{
+            //    DeadScreen.SetActive(true);
+            //}
             hp = 0;
             // Логика смерти
         }
