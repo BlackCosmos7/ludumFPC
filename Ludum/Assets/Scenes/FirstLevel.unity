@@ -428,6 +428,7 @@ MonoBehaviour:
   - {fileID: 7349075592608746380, guid: 1c14a64d3f4e97c47b78ec4f669f1b71, type: 3}
   player: {fileID: 1561464591}
   maxEnemies: 25
+  spawnSound: {fileID: 8300000, guid: cc939c0974b8a6b409284c05c3d0ecd2, type: 3}
 --- !u!1 &445215277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1279,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6d004b59c28487c4bb5b4c5efbaa6c68, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.269
+  m_Volume: 0.075
   m_Pitch: 1
   Loop: 1
   Mute: 0

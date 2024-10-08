@@ -9,8 +9,12 @@ public class EnemySpawner : MonoBehaviour
     public int maxEnemies = 10; // Максимальное количество врагов
     private int currentEnemyCount = 0; // Текущее количество врагов
 
+    public AudioClip spawnSound; // Звук спавна
+    private AudioSource audioSource; // Компонент AudioSource
+
     void Start()
     {
+        audioSource = gameObject.AddComponent<AudioSource>(); // Добавляем AudioSource
         StartCoroutine(SpawnEnemies());
     }
 
@@ -23,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
                 SpawnEnemy();
                 currentEnemyCount++;
             }
-            yield return new WaitForSeconds(2f); // Ждать 3 секунды
+            yield return new WaitForSeconds(2f); // Ждать 2 секунды
         }
 
         // После спавна всех врагов ждем 20 секунд и отправляем игрока на следующую сцену
@@ -37,6 +41,17 @@ public class EnemySpawner : MonoBehaviour
         // Случайный выбор противника из массива
         int randomIndex = Random.Range(0, enemyPrefabs.Length);
         Instantiate(enemyPrefabs[randomIndex], spawnPosition, Quaternion.identity);
+
+        // Проигрываем звук спавна
+        PlaySpawnSound();
+    }
+
+    void PlaySpawnSound()
+    {
+        if (spawnSound != null)
+        {
+            audioSource.PlayOneShot(spawnSound);
+        }
     }
 
     void LoadNextScene()
