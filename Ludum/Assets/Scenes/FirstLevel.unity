@@ -271,7 +271,7 @@ MonoBehaviour:
   - {fileID: 3558660482622515254, guid: 3a29d90cf85f35a44a44331f49721b7d, type: 3}
   - {fileID: 7349075592608746380, guid: 1c14a64d3f4e97c47b78ec4f669f1b71, type: 3}
   player: {fileID: 1561464591}
-  maxEnemies: 25
+  maxEnemies: 10
   spawnSound: {fileID: 8300000, guid: cc939c0974b8a6b409284c05c3d0ecd2, type: 3}
 --- !u!1 &445215277
 GameObject:

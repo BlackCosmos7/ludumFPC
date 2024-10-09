@@ -57,6 +57,6 @@ public class EnemySpawner : MonoBehaviour
     void LoadNextScene()
     {
         // Замените "NextSceneName" на название вашей следующей сцены
-        SceneManager.LoadScene("NextSceneName");
+        SceneManager.LoadScene("Level2");
     }
 }
