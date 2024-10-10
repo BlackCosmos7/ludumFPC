@@ -44,7 +44,7 @@ public class PlayerStats : MonoBehaviour
             //{
             //    DeadScreen.SetActive(true);
             //}
-            hp = 0;
+            hp = 1;
             {
                 Die();
             }
