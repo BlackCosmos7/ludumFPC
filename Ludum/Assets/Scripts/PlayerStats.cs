@@ -2,10 +2,12 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerStats : MonoBehaviour
 {
     public float hp = 3;
     public TextMeshProUGUI hpText;
+    public float jumpForce = 7f;
 
     void Start()
     {
@@ -64,4 +66,17 @@ public class PlayerStats : MonoBehaviour
             AddHp();
         }
     }
+
+    //void Update()
+    //{
+     //   Jump();
+    //}
+
+    //void Jump()
+    //{
+     //   if(Input.GetKeyDown(KeyCode.Space))
+      //  {
+      //      Rigidbody.velocity = new Vector(Rigidbody.velocity.x, jumpForce);
+      //  }
+   // }
 }
